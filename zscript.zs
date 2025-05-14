@@ -21,13 +21,8 @@ class NewShotgun : Shotgun replaces Shotgun {
 
     States {
         Fire:
-            SHTG A 3;
-            SHTG A 7 A_FireShotgun;
-            // SHTG BC 5;
-            // SHTG D 4;
-            // SHTG CB 5;
-            // SHTG A 3;
-            SHTG A 7 A_ReFire;
+            SHTG A 1 A_FireShotgun;
+            SHTG A 0 A_ReFire;
             Goto Ready;
     }
 }
