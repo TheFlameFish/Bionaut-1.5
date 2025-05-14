@@ -1,0 +1,8 @@
+ACTOR NewChainsaw : Chainsaw replaces Chainsaw
+{
+	Scale 4
+}
+
+ACTOR NewShotgun : Shotgun replaces Shotgun {
+	Weapon.AmmoUse 0
+}
