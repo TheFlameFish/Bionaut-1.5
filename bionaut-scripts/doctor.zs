@@ -45,15 +45,10 @@ class Doctor : Actor
 		HART H -1;
 		Stop;
 	XDeath:
-		POSS M 5;
-		POSS N 5 A_XScream;
-		POSS O 5 A_NoBlocking;
-		POSS PQRST 5;
-		POSS U -1;
-		Stop;
+		goto Death;
 	Raise:
-		POSS K 5;
-		POSS JIH 5;
+		HART H 1;
+        HART GFEDCBA 5;
 		Goto See;
 	}
 }
