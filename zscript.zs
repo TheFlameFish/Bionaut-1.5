@@ -1,5 +1,7 @@
 version "4.14.1"
 
+#include "bionaut-scripts/doctor.zs"
+
 class NewZombie : ZombieMan replaces ZombieMan {
     Default {
         Scale 0.25;
@@ -33,6 +35,7 @@ class NewShotgun : Shotgun replaces Shotgun {
 
     States {
         Fire:
+            TNT1 A 0 Bright A_Recoil(0.5);
             SHTG A 1 Bright A_FireShotgun;
             SHTG A 0 A_ReFire;
             Goto Ready;
