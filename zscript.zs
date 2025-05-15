@@ -35,7 +35,11 @@ class NewShotgun : Shotgun replaces Shotgun {
 
     States {
         Fire:
-            TNT1 A 0 Bright A_Recoil(0.5);
+            TNT1 A 0 Bright 
+            {
+                A_Recoil(0.5);
+                vel.z += 0.75;
+            }
             SHTG A 1 Bright A_FireShotgun;
             SHTG A 0 A_ReFire;
             Goto Ready;
