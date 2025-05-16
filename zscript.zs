@@ -1,6 +1,7 @@
 version "4.14.1"
 
 #include "bionaut-scripts/doctor.zs"
+#include "bionaut-scripts/mana-weapon.zs"
 
 class NewZombie : ZombieMan replaces ZombieMan {
     Default {
@@ -28,9 +29,10 @@ class NewChainsaw : Chainsaw replaces Chainsaw {
     }
 }
 
-class NewShotgun : Shotgun replaces Shotgun {
+class CoolShotgun : Shotgun {
     default {
 		Weapon.AmmoUse 0;
+        Weapon.SlotNumber 3;
     }
 
     States {

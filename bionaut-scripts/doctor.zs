@@ -2,7 +2,7 @@ class Doctor : Actor
 {
 	Default
 	{
-		Health 20;
+		Health 60;
 		Radius 20;
 		Height 56;
 		Speed 8;
@@ -29,7 +29,7 @@ class Doctor : Actor
 	Missile:
 		DOCT E 10 A_FaceTarget;
         TNT1 A 0 A_Light2;
-		DOCT F 8 Bright A_PosAttack;
+		DOCT F 8 Bright A_CustomComboAttack("DoomImpBall", 32, 3 * random(1, 8), "imp/melee");
         TNT1 A 0 A_Light0;
 		DOCT E 8;
 		Goto See;
