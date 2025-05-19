@@ -30,7 +30,7 @@ Sprite "DOCTA4A6", 240, 240
 	XScale 4.100
 	YScale 4.100
 	Offset 120, 240
-	Patch "DOCTA4A6", 0, 0
+	Patch "DOCTA2A8", 0, 0
 }
 
 Sprite "DOCTA3A7", 240, 240
@@ -38,7 +38,7 @@ Sprite "DOCTA3A7", 240, 240
 	XScale 4.100
 	YScale 4.100
 	Offset 120, 240
-	Patch "DOCTA3A7", 0, 0
+	Patch "DOCTA2A8", 0, 0
 }
 
 Sprite "DOCTB4B6", 240, 240

@@ -2,6 +2,7 @@ version "4.14.1"
 
 #include "bionaut-scripts/doctor.zs"
 #include "bionaut-scripts/mana-weapon.zs"
+#include "bionaut-scripts/projectiles.zs"
 
 class NewZombie : ZombieMan replaces ZombieMan {
     Default {
