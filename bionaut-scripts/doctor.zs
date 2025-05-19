@@ -18,7 +18,6 @@ class Doctor : Actor
 		ActiveSound "grunt/active";
 		Obituary "$OB_ZOMBIE";
 		Tag "Doctor";
-		DropItem "Clip";
 	}
 
 	virtual void A_DoctorAttack() {
