@@ -1,3 +1,4 @@
 DoomEdNums {
-    24000 = "FlameDoctor"
+    24000 = "Doctor"
+    24001 = "FlameDoctor"
 }
