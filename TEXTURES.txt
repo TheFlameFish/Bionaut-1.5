@@ -233,6 +233,238 @@ Sprite "DOCTF6F4", 240, 240
 	Patch "DOCTF8", 0, 0
 }
 
+Sprite "FDOCA1", 240, 240
+{
+	XScale 4.000
+	YScale 4.000
+	Offset 120, 240
+	Patch "FDOCA1", 0, 0
+}
+
+Sprite "FDOCB1", 240, 240
+{
+	XScale 4.000
+	YScale 4.000
+	Offset 120, 240
+	Patch "FDOCB1", 0, 0
+}
+
+Sprite "FDOCB3B7", 240, 240
+{
+	XScale 4.100
+	YScale 4.100
+	Offset 120, 240
+	Patch "FDOCB3B7", 0, 0
+}
+
+Sprite "FDOCA4A6", 240, 240
+{
+	XScale 4.100
+	YScale 4.100
+	Offset 120, 240
+	Patch "FDOCA2A8", 0, 0
+}
+
+Sprite "FDOCA3A7", 240, 240
+{
+	XScale 4.100
+	YScale 4.100
+	Offset 120, 240
+	Patch "FDOCA2A8", 0, 0
+}
+
+Sprite "FDOCB4B6", 240, 240
+{
+	XScale 4.100
+	YScale 4.100
+	Offset 120, 240
+	Patch "FDOCB4B6", 0, 0
+}
+
+Sprite "FDOCA5B5", 240, 240
+{
+	XScale 4.100
+	YScale 4.100
+	Offset 120, 240
+	Patch "FDOCA5B5", 0, 0
+}
+
+Sprite "FDOCB2B8", 240, 240
+{
+	XScale 4.100
+	YScale 4.100
+	Offset 120, 240
+	Patch "FDOCB2B8", 0, 0
+}
+
+Sprite "FDOCA2A8", 240, 240
+{
+	XScale 4.100
+	YScale 4.100
+	Offset 120, 240
+	Patch "FDOCA2A8", 0, 0
+}
+
+Sprite "FDOCO4O6", 240, 240
+{
+	XScale 4.000
+	YScale 4.000
+	Offset 120, 240
+	Patch "FDOCO4O6", 0, 0
+}
+
+Sprite "FDOCO3O7", 240, 240
+{
+	XScale 4.000
+	YScale 4.000
+	Offset 120, 240
+	Patch "FDOCO3O7", 0, 0
+}
+
+Sprite "FDOCO2O8", 240, 240
+{
+	XScale 4.000
+	YScale 4.000
+	Offset 120, 240
+	Patch "FDOCO2O8", 0, 0
+}
+
+Sprite "FDOCO1", 240, 240
+{
+	XScale 4.000
+	YScale 4.000
+	Offset 120, 240
+	Patch "FDOCO1", 0, 0
+}
+
+Sprite "FDOCI4I6", 240, 240
+{
+	XScale 4.000
+	YScale 4.000
+	Offset 120, 240
+	Patch "FDOCI4I6", 0, 0
+}
+
+Sprite "FDOCI3I7", 240, 240
+{
+	XScale 4.000
+	YScale 4.000
+	Offset 120, 240
+	Patch "FDOCI3I7", 0, 0
+}
+
+Sprite "FDOCI2I8", 240, 240
+{
+	XScale 4.000
+	YScale 4.000
+	Offset 120, 240
+	Patch "FDOCI2I8", 0, 0
+}
+
+Sprite "FDOCI1", 240, 240
+{
+	XScale 4.000
+	YScale 4.000
+	Offset 120, 240
+	Patch "FDOCA1", 0, 0
+}
+
+Sprite "FDOCO5", 240, 240
+{
+	XScale 4.000
+	YScale 4.000
+	Offset 120, 240
+	Patch "FDOCO5", 0, 0
+}
+
+Sprite "FDOCI5", 240, 240
+{
+	XScale 4.000
+	YScale 4.000
+	Offset 120, 240
+	Patch "FDOCI5", 0, 0
+}
+
+Sprite "FDOCE1", 240, 240
+{
+	XScale 4.000
+	YScale 4.000
+	Offset 120, 240
+	Patch "FDOCE1", 0, 0
+}
+
+Sprite "FDOCE8E2", 240, 240
+{
+	XScale 4.000
+	YScale 4.000
+	Offset 120, 240
+	Patch "FDOCE2", 0, 0
+}
+
+Sprite "FDOCE7E3", 240, 240
+{
+	XScale 4.000
+	YScale 4.000
+	Offset 120, 240
+	Patch "FDOCE2", 0, 0
+}
+
+Sprite "FDOCE6E4", 240, 240
+{
+	XScale 4.000
+	YScale 4.000
+	Offset 120, 240
+	Patch "FDOCE2", 0, 0
+}
+
+Sprite "FDOCE5", 240, 240
+{
+	XScale 4.000
+	YScale 4.000
+	Offset 120, 240
+	Patch "FDOCE5", 0, 0
+}
+
+Sprite "FDOCF5", 240, 240
+{
+	XScale 4.000
+	YScale 4.000
+	Offset 120, 240
+	Patch "FDOCE5", 0, 0
+}
+
+Sprite "FDOCF1", 240, 240
+{
+	XScale 4.000
+	YScale 4.000
+	Offset 120, 240
+	Patch "FDOCF1", 0, 0
+}
+
+Sprite "FDOCF8F2", 240, 240
+{
+	XScale 4.000
+	YScale 4.000
+	Offset 120, 240
+	Patch "FDOCF8", 0, 0
+}
+
+Sprite "FDOCF7F3", 240, 240
+{
+	XScale 4.000
+	YScale 4.000
+	Offset 120, 240
+	Patch "FDOCF8", 0, 0
+}
+
+Sprite "FDOCF6F4", 240, 240
+{
+	XScale 4.000
+	YScale 4.000
+	Offset 120, 240
+	Patch "FDOCF8", 0, 0
+}
+
 Sprite "HARTH0", 32, 32
 {
 	Offset 16, 32
