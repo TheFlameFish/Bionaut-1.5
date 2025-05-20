@@ -21,7 +21,7 @@ class Doctor : Actor
 	}
 
 	virtual void A_DoctorAttack() {
-		A_CustomComboAttack("BionautFireball", 32, 3 * random(1, 8), "imp/melee");
+		A_SpawnProjectile("BionautFireball", 32, 0, Random(-2, 2));
 	}
 
  	States
@@ -61,7 +61,7 @@ class Doctor : Actor
 
 class FlameDoctor : Doctor {
 	override void A_DoctorAttack() {
-		for (int i = 10; i > 0; i--)
+		for (int i = 5; i > 0; i--)
 		{
 			//A_CustomComboAttack("FlameWisp", 32, 3 * random(1, 8), "imp/melee");
 			A_SpawnProjectile("FlameWisp", Random(20, 40), 0, Random(-15, 15));
@@ -69,12 +69,18 @@ class FlameDoctor : Doctor {
 	}
 
 	States {
+		Spawn:
+			FDOC IO 15 A_Look();
+			Loop;
+		See:
+			FDOC AB 4 A_Chase();
+			Loop;
 		Missile:
-			DOCT E 10 A_FaceTarget();
+			FDOC E 10 A_FaceTarget();
 			TNT1 A 0 A_Light2();
-			DOCT FF 4 Bright A_DoctorAttack();
+			FDOC FF 4 Bright A_DoctorAttack();
 			TNT1 A 0 A_Light0();
-			DOCT E 8;
+			FDOC E 8;
 			Goto See;
 	}
 }
