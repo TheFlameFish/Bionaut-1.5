@@ -6,7 +6,7 @@ class BionautFireball : Actor
    Height 8;
    Speed 10;
    FastSpeed 20;
-   Damage 3;
+   Damage 2;
    Projectile;
    +RANDOMIZE
    +RIPPER
@@ -25,6 +25,8 @@ class BionautFireball : Actor
 }
 
 class FlameWisp : Actor {
+    int life;
+
     Default
     {
         Radius 6;
@@ -38,10 +40,17 @@ class FlameWisp : Actor {
         SeeSound "imp/attack";
         //DeathSound "imp/shotx";
     }
+
     States
     {
     Spawn:
-        PUFF AB 4 BRIGHT;
+        PUFF AB 4 BRIGHT {
+          life++;
+          if (life > 15) {
+            return ResolveState("Death");
+          }
+          return ResolveState(null);
+        }
         Loop;
     Death:
         PUFF CD 6 BRIGHT;
