@@ -61,7 +61,7 @@ class Doctor : Actor
 
 class FlameDoctor : Doctor {
 	override void A_DoctorAttack() {
-		for (int i = 5; i > 0; i--)
+		for (int i = 20; i > 0; i--)
 		{
 			//A_CustomComboAttack("FlameWisp", 32, 3 * random(1, 8), "imp/melee");
 			A_SpawnProjectile("FlameWisp", Random(20, 40), 0, Random(-15, 15));

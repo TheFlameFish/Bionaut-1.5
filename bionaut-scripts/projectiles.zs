@@ -13,14 +13,15 @@ class BionautFireball : Actor
    SeeSound "imp/attack";
    DeathSound "imp/shotx";
  }
+
  States
  {
- Spawn:
-   FIRE AB 4 BRIGHT;
-   Loop;
- Death:
-   FIRE CDE 6 BRIGHT;
-   Stop;
+  Spawn:
+    FIRE AB 4 BRIGHT;
+    Loop;
+  Death:
+    FIRE CDE 6 BRIGHT;
+    Stop;
  }
 }
 
@@ -33,7 +34,7 @@ class FlameWisp : Actor {
         Height 8;
         Speed 5;
         FastSpeed 10;
-        Damage 1;
+        DamageFunction clamp(Random(-3,1), 0, 1);
         Projectile;
         +RANDOMIZE
         +RIPPER
