@@ -1,20 +1,46 @@
 class ManaWeapon : Weapon {
-    float manaMax;
+    double manaMax;
     property manaMax : manaMax;
-    float manaAmount;
+    double manaUse;
+    property manaUse : manaUse;
+    double manaRate;
+    property manaRate : manaRate;
+    double manaAmount;
 
     Default {
         self.manaMax 100;
-        Weapon.AmmoUse 1;
+        self.manaUse 1;
+        self.manaRate 1;
+        Weapon.AmmoUse 0; // Hacky way of making Doom not switch weapons when player runs out of mana. Use manaUse
         Weapon.AmmoType "ManaAmmo";
+        +WEAPON.NOAUTOFIRE
     }
 
-    override void Tick() {
-        super.Tick();
-        if (manaAmount < manaMax) {
-                A_GiveInventory("ManaAmmo", 1);
-                manaAmount++;
+    override void DoEffect() {
+        super.DoEffect();
+        if (manaAmount <= manaMax) {
+                // Set amount of ammo in inventory to display on HUD
+                owner.A_SetInventory("ManaAmmo", int(Ceil(manaAmount)));
+                manaAmount+= manaRate * (1.0/35.0);
+                // Console.printf("Mana %f", manaAmount);
         }
+    }
+
+    action state A_CheckMana() {
+        // Somewhat copy-pasted from A_Refire :p
+        if (NULL == player)
+        {
+            return ResolveState(Null);
+        }
+        if (invoker.manaAmount < invoker.manaUse) {
+            player.refire = 0;
+            return ResolveState("Ready");
+        }
+        return ResolveState(null);
+    }
+
+    action void A_DepleteMana() {
+        invoker.manaAmount -= invoker.manaUse;
     }
 
     States {
@@ -28,65 +54,64 @@ class ManaWeapon : Weapon {
             TNT1 A 1;
             loop;
         Spawn:
-            #### # 0 {
-                // invoker.manaAmount = invoker.manaMax;
-                // A_GiveInventory("ManaAmmo", 1);
-            }
+            tnt1 A 0;
             stop;
         Fire:
-            TNT1 A 0 {
-                invoker.manaAmount--;
-            }
+            TNT1 A 0 A_CheckMana();
+            TNT1 A 0 A_DepleteMana();
             goto Ready;
     }
 }
 
+// Serves no purpose other than HUD display.
+// Amount is directly set by weapons.
 class ManaAmmo : Ammo
 {
     Default
     {
         Inventory.Icon "SHELA0";
-        Inventory.MaxAmount  100;
+        Inventory.MaxAmount  1e100;
     }
 }
 
 class ManaTest : ManaWeapon {
     Default
-	{
-		Weapon.SelectionOrder 1300;
+    {
+        ManaWeapon.ManaUse 5;
+        ManaWeapon.ManaRate 10;
+        Weapon.SelectionOrder 1300;
         Weapon.SlotNumber 4;
-		Inventory.PickupMessage "$GOTSHOTGUN";
-		Obituary "$OB_MPSHOTGUN";
-		Tag "$TAG_SHOTGUN";
-	}
+        Inventory.PickupMessage "$GOTSHOTGUN";
+        Obituary "$OB_MPSHOTGUN";
+        Tag "$TAG_SHOTGUN";
+    }
 
     States {
-        Ready:
-		SHTG A 1 A_WeaponReady;
-		Loop;
-	Deselect:
-		SHTG A 1 A_Lower;
-		Loop;
-	Select:
-		SHTG A 1 A_Raise;
-		Loop;
-	Fire:
-		SHTG A 3;
-		SHTG A 7 A_FireShotgun;
-		SHTG BC 5;
-		SHTG D 4;
-		SHTG CB 5;
-		SHTG A 3;
-		SHTG A 7 A_ReFire;
-        TNT1 A 0
+    Ready:
+        tnt1 A 0;
+        SHTG A 1 A_WeaponReady;
+        Loop;
+    Deselect:
+        SHTG A 1 A_Lower;
+        Loop;
+    Select:
+        SHTG A 1 A_Raise;
+        Loop;
+    Fire:
+        TNT1 A 0 A_CheckMana();
+        TNT1 A 0 Bright 
         {
-            invoker.manaAmount--;
+            A_Recoil(0.5);
+            vel.z += 0.75;
+            A_DepleteMana();
         }
-        goto Ready;  // jump to ManaTest’s Ready
+        SHTG A 1 Bright A_FireShotgun;
+        SHTG A 0 A_ReFire;
+        Goto Ready;
     Flash:
-		SHTF A 4 Bright A_Light1;
-		SHTF B 3 Bright A_Light2;
-		Goto LightDone;
+        SHTF A 4 Bright A_Light1;
+        SHTF B 3 Bright A_Light2;
+        Goto LightDone;
     Spawn:
         SHOT A -1;
         goto super::Spawn;
