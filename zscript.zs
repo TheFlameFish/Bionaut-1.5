@@ -1,4 +1,4 @@
-version "4.14.1"
+version "4.14.2"
 
 #include "bionaut-scripts/doctor.zs"
 #include "bionaut-scripts/mana-weapon.zs"
