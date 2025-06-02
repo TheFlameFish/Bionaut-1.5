@@ -50,8 +50,6 @@ class Doctor : Actor
 		HART DEFG 10;
 		HART H -1;
 		Stop;
-	XDeath:
-		goto Death;
 	Raise:
 		HART H 1;
         HART GFEDCBA 5;
