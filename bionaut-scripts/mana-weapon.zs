@@ -70,7 +70,7 @@ class ManaAmmo : Ammo
     Default
     {
         Inventory.Icon "SHELA0";
-        Inventory.MaxAmount  1e100;
+        Inventory.MaxAmount  1e6;
     }
 }
 
