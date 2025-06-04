@@ -39,10 +39,6 @@ class Doctor : Actor
         TNT1 A 0 A_Light0();
 		DOCT E 8;
 		Goto See;
-	Pain:
-		POSS G 3;
-		POSS G 3 A_Pain();
-		Goto See;
 	Death:
 		HART A 10 A_Scream();
 		HART B 10;
