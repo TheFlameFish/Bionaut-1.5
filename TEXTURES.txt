@@ -675,4 +675,22 @@ Sprite "PUNGA0", 384, 216
 	Patch "PUNGA0", 0, 0
 }
 
+Sprite "PUNGB0", 384, 216
+{
+	Offset 30, 30
+	Patch "PUNGB0", 0, 0
+}
+
+Sprite "PUNGC0", 384, 216
+{
+	Offset 30, 30
+	Patch "PUNGC0", 0, 0
+}
+
+Sprite "PUNGD0", 384, 216
+{
+	Offset 30, 30
+	Patch "PUNGD0", 0, 0
+}
+
 // End of texture definitions
