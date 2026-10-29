@@ -1,0 +1,1 @@
+LaundryAlarm = "sounds/Kiosk.mp3" //why is it named kiosk? I dont remember
