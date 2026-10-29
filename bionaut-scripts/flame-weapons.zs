@@ -5,7 +5,7 @@ class FireballWeapon : ManaWeapon {
         ManaWeapon.ManaRate 10;
         Weapon.SelectionOrder 1300;
         Weapon.SlotNumber 2;
-        Inventory.Pick  upMessage "$GOTSHOTGUN";
+        Inventory.PickupMessage "$GOTSHOTGUN";
         Obituary "$OB_MPSHOTGUN";
         Tag "$TAG_SHOTGUN";
     }
