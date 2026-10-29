@@ -1,5 +1,3 @@
-#include "bionaut-scripts/mana-weapon.zs"
-
 class FireballWeapon : ManaWeapon {
     Default
     {
@@ -7,7 +5,7 @@ class FireballWeapon : ManaWeapon {
         ManaWeapon.ManaRate 10;
         Weapon.SelectionOrder 1300;
         Weapon.SlotNumber 2;
-        Inventory.PickupMessage "$GOTSHOTGUN";
+        Inventory.Pick  upMessage "$GOTSHOTGUN";
         Obituary "$OB_MPSHOTGUN";
         Tag "$TAG_SHOTGUN";
     }
